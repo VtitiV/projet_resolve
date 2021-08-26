@@ -1,32 +1,77 @@
+@charset "utf-8";
 body {
     background-color : white;
     color: black;
-    background-image: url("fond tibco.jpg");
-    background-position: top;
+    background-position: top 20%;
     background-repeat: no-repeat;
-    background-size: 450px;
+    background-size: 425px;
+}
+.bordureicones{
+    border: solid;
+    height: 84%;
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+}
+.formul1{
+    display: flex;
+    position: absolute;
+    left: 46%;
+}
+.image-contenu-cadre{
+    border:solid;
+    height: 22%;
+    width: 30%;
+    border-radius: 10px 100px / 120px;
+}
+.image-contenu-cadre img {
+    max-width: 88px;
+    max-height: 100px;
+    }
+.carte-incident{
+    flex-direction: row;
+    display: flex;
+    width: 50%;
+    height: 75%;
+    flex-wrap: wrap;
+}
+#formul{
+    display: flex;
+    position: relative;
+    height: 177px;
+    border: 1px solid right: 20%;
+}
+#titreprincipal{
+    display: flex;
+    right: 20%;
+    position: absolute;
+    top:5%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size:2.5rem;
+}
+.entete{
+    height: 160px;
 }
 H1{
     text-align: center;
+    text-transform: uppercase;
 }
 .wrapper {
     display: flex;
     align-items: stretch;
 }
-
 #sidebar {
     min-width: 250px;
     max-width: 250px;
     min-height: 100vh;
 }
-
 #sidebar.active {
     margin-left: -250px;
 }
 a[data-toggle="collapse"] {
     position: relative;
 }
-
 .dropdown-toggle::after {
     display: block;
     position: absolute;
@@ -47,29 +92,24 @@ a, a:hover, a:focus {
     text-decoration: none;
     transition: all 0.3s;
 }
-
 #sidebar {
     /* don't forget to add all the previously mentioned styles here too */
     background: #7386D5;
     color: #fff;
     transition: all 0.3s;
 }
-
 #sidebar .sidebar-header {
     padding: 20px;
     background: #6d7fcc;
 }
-
 #sidebar ul.components {
     padding: 20px 0;
     border-bottom: 1px solid #47748b;
 }
-
 #sidebar ul p {
     color: #fff;
     padding: 10px;
 }
-
 #sidebar ul li a {
     padding: 10px;
     font-size: 1.1em;
@@ -79,7 +119,6 @@ a, a:hover, a:focus {
     color: black;
     background: #fff;
 }
-
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
     background: #6d7fcc;

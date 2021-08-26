@@ -3,69 +3,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{% static 'css/style.css'%} ">
+    <title>Accueil</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="{% static '/css/style.css'%} ">
 </head>
-<body>
-  <h1> bienvenu sur Resolve</h1>
-  {% block content %}
-<div class="wrapper">
-    <!-- Sidebar -->
-    <nav id="sidebar">
-        <div class="sidebar-header">
-            <a href="/">Accueil</a>
-        </div>
+    <body>
+        <header class="entete">
+            <img class="image" src="static/css/fond tibco.jpg" />
+            <h1 id="titreprincipal"> bienvenu sur E-Resolve</h1>
+        </header>
+            {% include "includes/tabs.html"  %}
 
-        <ul class="list-unstyled components">
 
-            <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li>
-                        <a href="#">formulaire de demande</a>
-                    </li>
-                    <li>
-                        <a href="incidents/">Incident</a>
-                    </li>
-                    <li>
-                        <a href="#">Demande</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Procedures</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li>
-                        <a href="#">Demande de comptes</a>
-                    </li>
-                    <li>
-                        <a href="#">Hopital manager</a>
-                    </li>
-                    <li>
-                        <a href="#">telephonie</a>
-                    </li>
-                    <li>
-                        <a href="#">imprimantes</a>
-                    </li>
-                    <li>
-                        <a href="#">autres</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">tableau aide memoire compte</a>
-            </li>
-            <li>
-                <a href="#">videos</a>
-            </li>
-        </ul>
-    </nav>
-{% endblock %}
-</div>
+    </body>
+    <footer>
+
+</footer>
 <script>
     $(document).ready(function () {
 
@@ -81,6 +36,6 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-</body>
+
 
 </html>
