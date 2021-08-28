@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def demandedepart(request):
+    return render(request, "demandetemplates/demande.html")
+
+
