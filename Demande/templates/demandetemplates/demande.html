@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-  <h1>demande</h1>
-</body>
-</html>
+{% load static%}
+    {% block demandes %}
+  <input type="button" value="Demande de compte" onclick="faireapparaitre('diveapparuechoixdecompte');" />
+
+    <script>
+        function faireapparaitre(id)
+            {
+                 if (document.getElementById(id).style.display == 'none')
+                      {
+                           document.getElementById(id).style.display = 'block';
+                      }
+                 else
+                      {
+                           document.getElementById(id).style.display = 'none';
+                      }
+            }
+    </script>
+        {% endblock %}

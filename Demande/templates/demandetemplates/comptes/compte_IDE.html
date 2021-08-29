@@ -1,0 +1,26 @@
+{% load static%}
+
+    {% block demandescompteide %}
+    <h1>demande de compte IDE</h1>
+
+    <div id="compteIDE">
+            <div  id=icones="choixdemandes">
+
+            </div>
+
+    </div>
+
+<script>
+    function choixoui(id)
+    {
+      if (document.getElementById(id).style.display == 'none')
+      {
+           document.getElementById(id).style.display = 'block';
+      }
+      else
+      {
+           document.getElementById(id).style.display = 'none';
+      }
+    }
+</script>
+ {% endblock %}

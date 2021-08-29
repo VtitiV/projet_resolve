@@ -1,0 +1,25 @@
+{% load static%}
+    {% block choixdecompte %}
+    <div id="diveapparuechoixdecompte">
+        <div class="carte-incident">
+            <div class="menuincident" id=icones="choixdemande">
+                {% include "comptes/choixtypedecomptes.html"  %}
+            </div>
+        </div>
+    </div>
+<script>
+function choixoui(id)
+    {
+      if (document.getElementById(id).style.display == 'none')
+      {
+           document.getElementById(id).style.display = 'block';
+      }
+      else
+      {
+           document.getElementById(id).style.display = 'none';
+      }
+    }
+
+</script>
+
+{% endblock %}

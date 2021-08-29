@@ -39,19 +39,39 @@
     </div>
   </fieldset>
         <input type="button" value="Incident" onclick="faireapparaitre('diveapparueincident');" />
-        <button id=""  class="btn btn-primary">Demande</button>
+        <input type="button" value="Demande" onclick="faireapparaitre2('diveapparuedemanede');" />
+
 </form>
 <script>
 function faireapparaitre(id)
-{
-  if (document.getElementById(id).style.display == 'none')
-  {
-       document.getElementById(id).style.display = 'block';
-  }
-  else
-  {
-       document.getElementById(id).style.display = 'none';
-  }
-}
+    {
+      if (document.getElementById(id).style.display == 'none')
+      {
+           document.getElementById(id).style.display = 'block';
+      }
+      else
+      {
+           document.getElementById(id).style.display = 'none';
+      }
+    }
+    function faireapparaitre2(id)
+    {
+      if (document.getElementById(id).style.display == 'none')
+      {
+           document.getElementById(id).style.display = 'block';
+      }
+      else
+      {
+           document.getElementById(id).style.display = 'none';
+      }
+    }
 </script>
     {% endblock %}
+
+<!--togg1.addEventListener("click", () => {
+  if(getComputedStyle(d1).display != "none"){
+    d1.style.display = "none";
+  } else {
+    d1.style.display = "block";
+  }
+})-->
