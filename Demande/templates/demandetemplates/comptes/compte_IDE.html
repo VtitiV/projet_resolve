@@ -1,16 +1,44 @@
 {% load static%}
 
     {% block demandescompteide %}
-    <h1>demande de compte IDE</h1>
+<br>
+<div>
+<div>
+     <input type="button" value="(1) syscompte" onclick="choixoui('syscompte');" />
+        <div style="display:none ;" id="syscompte"><a href="static/proceduresdemandes/syscompte.png"></a> <p>Création de compte syscompte (fiche utilisateur)
+            <div><input type="button" class="btn btn-success" value="exemple de fiche" onclick="choixoui('imagesyscompte');" /></div>
+                 <div id="imagesyscompte" style="display:none ;">
+                 <img class="image" src="static/images/fiche_syscompte.png" />
+                    </div>
+        <span class="d-inline-block" data-toggle="popover" data-content=""  >
+    <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Info syscompte</button></span></p></div>
+    <input type="button" value="(2)AD" onclick="choixoui('AD');" />
+        <div id="AD" style="display:none ;"> <p>Création de compte AD
+        <span class="d-inline-block" data-toggle="popover" data-content="NOM en majuscule Prenom en majuscule, ne rien mettre dans initiale, inversée nom et prenom dans nom complet, ouverture antérieur a 2000 mettre le login syscompte">
+        <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Info AD</button></span></p></div>
+    <input type="button" value="(3)messagerie" onclick="choixoui('messagerie');" />
+        <div id="messagerie" style="display:none ;"> <p>Création de compte de Messagerie</p></div>
+</div></div>
+*******************************************************************
 
-    <div id="compteIDE">
-            <div  id=icones="choixdemandes">
 
-            </div>
+    <p>Test de Messagerie -&gt;</p>
+    <p>Création de compte Crossway -&gt;</p>
+    <p>Test de compte Crossway -&gt;</p>
+    <p>Création de compte HM</p>
+    <p>Test de compte HM -&gt;</p>
+    <p>Création de compte Cursus</a> -&gt;</p>
+    <p>Test de compte Cursus -&gt;</p>
+    <p>Création de compte Tensiométre</p>
+    <p>Test de compte Tensiomètre -&gt;</p>
+    <p>Demande de compte ORDONNE</p>
+    <p>Envoi des identifiants </p>
 
-    </div>
+
+
 
 <script>
+
     function choixoui(id)
     {
       if (document.getElementById(id).style.display == 'none')
@@ -22,5 +50,8 @@
            document.getElementById(id).style.display = 'none';
       }
     }
+
+
 </script>
+
  {% endblock %}

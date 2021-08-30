@@ -1,11 +1,17 @@
 {% load static%}
     {% block demandes %}
     <div>
-  <input type="button" value="Demande de compte" onclick="faireapparaitre('diveapparuechoixdecompte');" />
- {% block choixdecompte %}   {% endblock %}
+  <input type="button" value="demande de comptes" onclick="diveapparuechoixdecompte('diveapparuechoixdecompte');" />
+    </div>
+    <div id="diveapparuechoixdecompte">
+        <div class="carte-incident">
+            <div class="menudemandedecompte" id=icones="diveapparuechoixdecompte">
+            {% include "demandetemplates/comptes/choixtypedecomptes.html"  %}
+            </div>
+        </div>
     </div>
     <script>
-        function faireapparaitre(id)
+        function diveapparuechoixdecompte(id)
             {
                  if (document.getElementById(id).style.display == 'none')
                       {
@@ -17,4 +23,6 @@
                       }
             }
     </script>
+    <script src="assets/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
         {% endblock %}

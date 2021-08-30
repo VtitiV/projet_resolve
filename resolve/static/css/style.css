@@ -43,7 +43,7 @@ body {
 }
 #titreprincipal{
     display: flex;
-    right: 20%;
+    right: 37%;
     position: absolute;
     top:5%;
     letter-spacing: 2px;
@@ -52,6 +52,15 @@ body {
 }
 .entete{
     height: 160px;
+}
+.modal{
+    position: fixed;
+    width: 502%;
+    height: auto;
+    top: 31%;
+}
+.modal-body{
+    display:flex;
 }
 H1{
     text-align: center;

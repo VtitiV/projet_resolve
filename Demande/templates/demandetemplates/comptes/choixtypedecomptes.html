@@ -1,15 +1,60 @@
-{% extends ' demande.html '%}
+
 {% load static%}
     {% block choixdecompte %}
-    <div id="diveapparuechoixdecompte">
-        <div class="carte-incident">
-            <div class="menudemandedecompte" id=icones="diveapparuechoixdecompte">
-                {% include "demandetemplates/comptes/choixtypedecomptes.html"  %}
-            </div>
-        </div>
-    </div>
+
+<!-- Button to Open the Modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+           faire le choix
+      </button>
+
+      <!-- The Modal -->
+      <div class="modal ; col-md-12" id="myModal">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <!-- Modal Header -->
+               <div class="modal-header">
+                  <h4 class="modal-title">choix des types de comptes</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <!-- Modal body -->
+               <div class="modal-body">
+                   <div>
+                      <div>
+             <input type="button" value="IDE" onclick="faireapparaitre('compteIDE');" />
+                </div>
+                    <div id="compteIDE">
+                        <div class="carte-incident">
+                            <div class="menudemandedecompte" id=icones="">
+                            {% include "demandetemplates/comptes/compte_IDE.html"  %}
+                            </div>
+                        </div>
+                    </div>
+             <input type="button" value="medecin" onclick="faireapparaitre('comptemedecin');" />
+                    <div id="compte medecins">
+                        <div class="carte-incident">
+                            <div class="menudemandedecompte" id=icones="comptemedecins">
+                            {% include "demandetemplates/comptes/compte_medecin.html"  %}
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                   </div>
+                   <!-- Modal footer -->
+                   <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                   </div>
+                </div>
+             </div>
+          </div>
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script>
-function choixoui(id)
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+function faireapparaitre(id)
     {
       if (document.getElementById(id).style.display == 'none')
       {

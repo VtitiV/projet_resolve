@@ -54,14 +54,15 @@
             {% include "usertemplate/user.html" with active_tab='tab1' %}
         </div>
     </nav>
-    <div id="diveapparueincident">
+    <div >
+    <div id="diveapparueincident" style="display:none ;">
         <div class="carte-incident">
             <div class="menuincident" id=icones="choixincidents">
                 {% include "incidentstemplates/incidents.html"  %}
             </div>
         </div>
     </div>
-    <div id="diveapparuedemanede">
+    <div id="diveapparuedemanede" style="display:none ;">
         <div class="carte-incident">
             <div class="menuincident" id=icones="choixdemande">
                 {% include "demandetemplates/demande.html"  %}
@@ -69,7 +70,6 @@
         </div>
     </div>
     </div>
-
 <script>
     $(document).ready(function () {
 
@@ -78,6 +78,9 @@
     });
 
 });
+$('.popover-dismiss').popover({
+  trigger: 'focus'
+})
 </script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->

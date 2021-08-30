@@ -1,6 +1,7 @@
 {% load static%}
 
     {% block content_user%}
+<link rel="stylesheet" href="{% static '/css/style.css'%} ">
     <form>
        <div class="col">
          <div class="col">
@@ -38,7 +39,9 @@
       </div>
     </div>
   </fieldset>
+
         <input type="button" value="Incident" onclick="faireapparaitre('diveapparueincident');" />
+
         <input type="button" value="Demande" onclick="faireapparaitre2('diveapparuedemanede');" />
 
 </form>
