@@ -1,0 +1,35 @@
+{% extends "resolve/includes/tabs.html" %}
+{% load static %}
+{% block content %}
+<div>
+    <div>
+        <label for="name">Nom :</label>
+        <input id="name" name="user_name" type="text">
+        <label for="name">Prenom :</label>
+        <input id="prenom" name="user_prenom" type="text">
+        <label for="telephone">Nom :</label>
+        <input id="telephone" name="telephone" type="text">
+    </div>
+    <button onclick="maFonction()">Bouton</button>
+    <div id="maDIV" style="display:none;">
+        {% include "resolve/incident/Incidents.html" %}
+
+
+    </div>
+
+</div>
+
+
+<script>
+function maFonction() {
+  var div = document.getElementById("maDIV");
+  if (div.style.display === "none") {
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+}
+
+
+</script>
+{% endblock %}
