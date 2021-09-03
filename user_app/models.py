@@ -1,3 +1,7 @@
+from django.utils.translation import gettext as _
+
 from django.db import models
 
-# Create your models here.
+class Utilisateurs (models.Model):
+
+    Surname = models.CharField(_("nom"),max_length=255)
